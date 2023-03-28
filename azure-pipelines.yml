@@ -2,8 +2,10 @@ trigger:
   - '*'
   
 pool:
-    vmImage: 'ubuntu-22.04'
-  
+    vmImage: 'ubuntu-22.04'pool:
+      name: 'MyAgentPool'
+      demands:
+      - npm
 variables:
     buildConfiguration: 'Release'
     wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
