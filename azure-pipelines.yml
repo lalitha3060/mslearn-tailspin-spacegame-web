@@ -9,12 +9,14 @@ variables:
     buildConfiguration: 'Release'
     wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
     dotnetSdkVersion: '6.x'
-
+    db:
+      host: db.com
+      
     type: DBConnection
     fields:
         # this will will change depending on witch values.yaml is packaged
         host: '{{db.host}}'
-        
+
 steps:
   - task: UseDotNet@2
     displayName: 'Use .NET SDK $(dotnetSdkVersion)'
